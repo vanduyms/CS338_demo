@@ -13,7 +13,9 @@ def main():
     res = None
     all_res = []
     with col1:
-      st.title("Image")
+      col_1, col_2 = st.columns([3, 1])
+      with col_1: 
+        st.title("Image")
       uploaded_file = st.file_uploader("Upload images", type=["jpg", "jpeg", "png"])
       if uploaded_file is not None:
           image = Image.open(uploaded_file)
@@ -23,12 +25,13 @@ def main():
 
           st.image(resized_image, caption="Image Recognition", use_column_width='auto')
           
-          if st.button("Submit"):
-            all_box = detect.pred(image)
+          with col_2:
+            if st.button("Submit"):
+              all_box = detect.pred(image)
 
-            for i in all_box:
-              res = decode_ocr.OCR(i)
-              all_res.append(res)
+              for i in all_box:
+                res = decode_ocr.OCR(i)
+                all_res.append(res)
               
     with col2: 
       st.title("Result")
