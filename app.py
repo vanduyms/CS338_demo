@@ -32,6 +32,17 @@ def main():
               for i in all_box:
                 res = decode_ocr.OCR(i)
                 all_res.append(res)
+
+            col_2.markdown(
+              """
+              <style>
+              .stButton>button {
+                  margin-top: 30px;
+              }
+              </style>
+              """,
+              unsafe_allow_html=True
+            )
               
     with col2: 
       st.title("Result")
