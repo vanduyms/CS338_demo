@@ -1,4 +1,3 @@
-PIL==9.2.0
 ultralytics==8.0.131
 tensorflow==2.11.0
 keras==2.11.0
