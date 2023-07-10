@@ -17,8 +17,8 @@ def main():
       uploaded_file = st.file_uploader("Upload images", type=["jpg", "jpeg", "png"])
       if uploaded_file is not None:
           image = Image.open(uploaded_file)
-          new_width = int(image.width * 0.8)
-          new_height = int(image.height * 0.8)
+          new_width = int(image.width * 1)
+          new_height = int(image.height * 1)
           resized_image = image.resize((new_width, new_height))
 
           st.image(resized_image, caption="Image Recognition", use_column_width=False)
