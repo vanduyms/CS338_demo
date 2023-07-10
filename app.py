@@ -35,9 +35,9 @@ def main():
       if len(all_res) > 0: 
         if len(all_res) == 2:
           result = compareDate.get_max_date(all_res[0], all_res[1])
-          st.title("Ngày hết hạn: " + result)
+          st.subheader("Ngày hết hạn: " + result)
         else:
-          st.title("Ngày hết hạn: " + all_res[0])
+          st.subheader("Ngày hết hạn: " + all_res[0])
             
 
 if __name__ == '__main__':
