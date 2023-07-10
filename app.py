@@ -21,7 +21,7 @@ def main():
           new_height = int(image.height * 1)
           resized_image = image.resize((new_width, new_height))
 
-          st.image(resized_image, caption="Image Recognition", use_column_width=False)
+          st.image(resized_image, caption="Image Recognition", use_column_width='auto')
           
           if st.button("Submit"):
             all_box = detect.pred(image)
