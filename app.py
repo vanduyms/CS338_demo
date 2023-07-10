@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-import YOLO
+import detect
 import decode_ocr
 import compareDate
 
@@ -24,7 +24,7 @@ def main():
           st.image(resized_image, caption="Image Recognition", use_column_width=True)
           
           if st.button("Submit"):
-            all_box = YOLO.pred(image)
+            all_box = detect.pred(image)
 
             for i in all_box:
               res = decode_ocr.OCR(i)
