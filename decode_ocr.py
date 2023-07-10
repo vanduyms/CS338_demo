@@ -77,6 +77,6 @@ def OCR(img_path):
   res = ocr_pred_model.predict(tf.expand_dims(resized_image, axis=0))
   label_predict = decode_pred(res)[0]
 
-  # print(f"Predicted Label : {label_predict}")
+  print(f"Predicted Label : {label_predict}")
 
   return label_predict
