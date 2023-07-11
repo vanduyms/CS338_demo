@@ -39,6 +39,7 @@ def main():
               .stButton>button {
                 margin-top: 30px;
                 margin-left: 90px;
+                width: 100%;
               }
               </style>
               """,
