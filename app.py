@@ -18,7 +18,7 @@ def main():
         st.title("Image")
       uploaded_file = st.file_uploader("Upload images", type=["jpg", "jpeg", "png"])
       if uploaded_file is not None:
-          image = Image.open(uploaded_file)
+          image = Image.open(uploaded_file).convert("RGB")
           new_width = int(image.width * 1)
           new_height = int(image.height * 1)
           resized_image = image.resize((new_width, new_height))
