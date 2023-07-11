@@ -37,9 +37,10 @@ def main():
               """
               <style>
               .stButton>button {
-                display: flex;
                 margin-top: 30px;
-                align-items: flex-end;
+                display: flex;
+                align-items: center;
+                justify-content: center;
               }
               </style>
               """,
